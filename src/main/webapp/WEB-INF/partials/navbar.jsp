@@ -9,6 +9,9 @@
             <li><a href="/logout">Logout</a></li>
             <li><a href="/register">Register</a></li>
             <li><a href="/test">Test</a></li>
+            <li><a href="/test">Test</a></li>
+            <li><a href="/test">Test</a></li>
+            <li><a href="/test">Test</a></li>
         </ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
