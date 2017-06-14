@@ -13,6 +13,10 @@
                 <label for="title">Title</label>
                 <input id="title" name="title" class="form-control" type="text">
             </div>
+            <select id="category" name="category">
+                <option value="1">New</option>
+                <option value="2">Used</option>
+            </select>
             <div class="form-group">
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
