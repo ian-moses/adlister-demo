@@ -74,10 +74,11 @@ public class MySQLAdsDao implements Ads {
         return ads;
     }
 
-    public List<Ad> getAdd(String ad_id) {
+    public List<Ad> getAd(String ad_id) {
         PreparedStatement stmt = null;
         try {
-            stmt = connection.prepareStatement("SELECT * FROM ads WHERE ads.id LIKE ad_id");
+            stmt = connection.prepareStatement("SELECT * FROM ads WHERE id LIKE ?");
+            stmt.setString(1, ad_id);
             ResultSet rs = stmt.executeQuery();
             return createAdsFromResults(rs);
         } catch (SQLException e) {

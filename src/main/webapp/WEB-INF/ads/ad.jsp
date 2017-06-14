@@ -1,20 +1,23 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: mosesfranco
-  Date: 6/14/17
-  Time: 12:15 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Create a new Ad" />
+        <jsp:param name="title" value="Viewing an item" />
     </jsp:include>
 </head>
 <body>
-    <h1>${ad.title} <small>${ad.category}</small></h1>
-    <h3>Sold by: ${ad.user_id}</h3>
-    <p>${ad.description}</p>
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
+
+<div class="container">
+
+    <c:forEach var="ad" items="${ads}">
+        <div class="col-md-6">
+            <h1><a href="ads/${ad.id}"><h2>${ad.title}</h2></a></h1>
+            <p>${ad.description}</p>
+        </div>
+    </c:forEach>
+</div>
+
 </body>
 </html>
