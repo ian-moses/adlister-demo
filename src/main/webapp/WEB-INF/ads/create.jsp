@@ -17,8 +17,8 @@
 
 
         <select name="sqlCategory" id="sqlCategory">
-            <c:forEach var="category" items="${category}">
-                <<option value="${category}">${category}</option>
+            <c:forEach var="categories" items="${category}">
+                <<option value="<c:out value="${categories}"/>"><c:out value="${categories}"/></option>
             </c:forEach>
         </select>
 
