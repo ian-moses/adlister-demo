@@ -90,7 +90,7 @@ public class MySQLAdsDao implements Ads {
     	PreparedStatement stmt;
     	List<String> category = new ArrayList<>();
     	try {
-    		stmt = connection.prepareStatement("SELECT category FROM ads GROUP BY category ASC ");
+    		stmt = connection.prepareStatement("SELECT * FROM ads GROUP BY category ASC ");
     		ResultSet rs = stmt.executeQuery();
     		while (rs.next()){
     			category.add(rs.getString("category"));
