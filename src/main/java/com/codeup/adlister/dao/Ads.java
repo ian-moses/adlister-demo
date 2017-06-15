@@ -11,4 +11,6 @@ public interface Ads {
     Long insert(Ad ad);
 
     List<Ad> getAd(Long ad_id);
+
+    List<String> categories();
 }
