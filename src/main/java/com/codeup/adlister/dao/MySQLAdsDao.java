@@ -85,4 +85,20 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error retrieving ad.", e);
         }
     }
+
+    public List<String> categories(){
+    	PreparedStatement stmt;
+    	List<String> category = new ArrayList<>();
+    	try {
+    		stmt = connection.prepareStatement("SELECT category FROM ads GROUP BY category ASC ");
+    		ResultSet rs = stmt.executeQuery();
+    		while (rs.next()){
+    			category.add(rs.getString("category"));
+		    }
+    		return category;
+
+	    } catch (SQLException e){
+    		throw new RuntimeException("Something went wrong fetching categories from the table");
+	    }
+    }
 }
