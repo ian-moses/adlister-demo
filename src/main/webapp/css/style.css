@@ -1,16 +1,16 @@
 body {
-    background-color: #070507;
+    background-color: #042037;
     color: #EAE0C8;
 
 }
 
 .navbar-default {
-    background-color: #2D1E26;
+    background-color: #496D89 !important;
     border: none;
 }
 
 a {
-    color: #F0FFF0 !important;
+    color: #A9A9A9 !important;
     text-decoration: none !important;
 }
 
@@ -20,7 +20,7 @@ a:hover {
 
 .btn-primary {
     color: #F0FFF0;
-    background-color: #487D79;
+    background-color: #123652;
     border: none;
 }
 

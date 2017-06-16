@@ -16,11 +16,10 @@
             <input id="title" name="title" class="form-control" type="text">
         </div>
 
-        <select name="category" id="category">
-            <c:forEach var="categories" items="${category}">
-                <<option value="<c:out value="${categories}"/>"><c:out value="${categories}"/></option>
-            </c:forEach>
-        </select>
+        <div class="form-group">
+            <label for="category">Tag</label>
+            <input id="category" name="category" class="form-control" type="text">
+        </div>
 
         <div class="form-group">
             <label for="description">Description</label>
