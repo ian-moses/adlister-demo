@@ -17,3 +17,9 @@ a {
 a:hover {
     color: #FF476A !important;
 }
+
+.btn-primary{
+    color: #F0FFF0;
+    background-color: #B2203C;
+    border: none;
+}
