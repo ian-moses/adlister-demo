@@ -18,8 +18,16 @@ a:hover {
     color: #FF476A !important;
 }
 
-.btn-primary{
+.btn-primary {
     color: #F0FFF0;
-    background-color: #B2203C;
+    background-color: #487D79;
     border: none;
+}
+
+.btn-primary:hover {
+    background-color: #325754;
+}
+
+select#category{
+    color: #555 !important;
 }
