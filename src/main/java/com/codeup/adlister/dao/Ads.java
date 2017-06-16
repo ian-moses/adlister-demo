@@ -13,4 +13,6 @@ public interface Ads {
     List<Ad> getAd(Long ad_id);
 
     List<String> categories();
+
+    List<Ad> adsByUser(Long user_id);
 }

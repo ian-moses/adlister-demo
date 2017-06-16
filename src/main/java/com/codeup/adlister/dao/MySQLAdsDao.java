@@ -101,4 +101,16 @@ public class MySQLAdsDao implements Ads {
     		throw new RuntimeException("Something went wrong fetching categories from the table");
 	    }
     }
+
+    public List<Ad> adsByUser(Long user_id) {
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement("SELECT * FROM ads WHERE user_id LIKE ?");
+            stmt.setLong(1, user_id);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+    }
 }
