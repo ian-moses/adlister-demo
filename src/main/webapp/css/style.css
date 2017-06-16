@@ -1,0 +1,33 @@
+body {
+    background-color: #070507;
+    color: #EAE0C8;
+
+}
+
+.navbar-default {
+    background-color: #2D1E26;
+    border: none;
+}
+
+a {
+    color: #F0FFF0 !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #FF476A !important;
+}
+
+.btn-primary {
+    color: #F0FFF0;
+    background-color: #487D79;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #325754;
+}
+
+select#category{
+    color: #555 !important;
+}
