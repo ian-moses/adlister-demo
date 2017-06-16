@@ -22,7 +22,6 @@ public class CreateAdServlet extends HttpServlet {
 		request.getRequestDispatcher("/WEB-INF/ads/create.jsp")
 				.forward(request, response);
 		List<String> categories = DaoFactory.getAdsDao().categories();
-		System.out.println(categories);
 		request.getSession().setAttribute("category", categories);
 	}
 

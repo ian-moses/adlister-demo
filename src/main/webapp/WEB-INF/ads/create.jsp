@@ -15,17 +15,12 @@
             <input id="title" name="title" class="form-control" type="text">
         </div>
 
-
-        <select name="sqlCategory" id="sqlCategory">
+        <select name="category" id="category">
             <c:forEach var="categories" items="${category}">
                 <<option value="<c:out value="${categories}"/>"><c:out value="${categories}"/></option>
             </c:forEach>
         </select>
 
-        <select id="category" name="category">
-            <option value="1">New</option>
-            <option value="2">Used</option>
-        </select>
         <div class="form-group">
             <label for="description">Description</label>
             <textarea id="description" name="description" class="form-control" type="text"></textarea>
