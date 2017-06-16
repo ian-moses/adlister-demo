@@ -23,10 +23,9 @@ CREATE TABLE ads (
   user_id     INT UNSIGNED NOT NULL,
   title       VARCHAR(240) NOT NULL,
   description TEXT         NOT NULL,
-  category    INT UNSIGNED,
+  category    VARCHAR(100),
   PRIMARY KEY (id),
-  FOREIGN KEY (user_id) REFERENCES users (id),
-  FOREIGN KEY (category) REFERENCES category (id)
+  FOREIGN KEY (user_id) REFERENCES users (id)
 );
 
 INSERT INTO category (`id`, `category`) VALUES (1, 'community');
