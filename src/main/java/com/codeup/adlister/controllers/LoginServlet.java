@@ -1,6 +1,7 @@
 package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
+import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
 import com.codeup.adlister.util.Password;
 
@@ -41,7 +42,11 @@ public class LoginServlet extends HttpServlet {
             request.getSession().setAttribute("user", user);
             response.sendRedirect("/profile");
         } else {
+            request.getSession().setAttribute("error", "Login credentials incorrect.");
             response.sendRedirect("/login");
         }
+
+        List<Ad> userAds = DaoFactory.getAdsDao().adsByUser(user.getId());
+        request.getSession().setAttribute("user_ad", userAds);
     }
 }
