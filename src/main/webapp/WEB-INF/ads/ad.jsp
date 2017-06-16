@@ -13,11 +13,9 @@
 <div class="container">
 
     <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6">
-            <h1><c:out value="${ad.title}"/></h1>
+        <div class="col-sm-12">
+            <h1><c:out value="${ad.title}"/><small> <c:out value="${ad.category}"/></small></h1>
             <p><c:out value="${ad.description}"/></p>
-            <p><c:out value="${ad.id}"/></p>
-            <p><c:out value="${ad.category}"/></p>
         </div>
     </c:forEach>
 </div>
