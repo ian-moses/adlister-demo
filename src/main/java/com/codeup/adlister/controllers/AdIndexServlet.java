@@ -9,18 +9,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "controllers.AdsIndexServlet", urlPatterns = "/ads/*")
+@WebServlet(name = "controllers.AdIndexServlet", urlPatterns = "/ad")
 public class AdIndexServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println(request.getPathInfo());
-		if(request.getPathInfo() == null){
-			request.setAttribute("ads", DaoFactory.getAdsDao().all());
-			request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
-			return;
-		}
-		String pathInfo = request.getPathInfo();
-		String ad_id = pathInfo.substring(1, pathInfo.length());
-		request.setAttribute("ads", DaoFactory.getAdsDao().getAd(ad_id));
+
+		Long ad_id = Long.parseLong(request.getParameter("id"));
+		System.out.println(ad_id);
+		request.setAttribute("ads", DaoFactory.getAdsDao().getAd(ad_id)); //Parameter might be better if it was ad, or to show a 404
 		request.getRequestDispatcher("/WEB-INF/ads/ad.jsp").forward(request, response);
 	}
 
