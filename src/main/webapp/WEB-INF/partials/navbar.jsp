@@ -6,10 +6,10 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
             <%! String logInOrOut; %>
-            <% if(session.getAttribute("user") != null){
-            	logInOrOut = "<li><a href=\"/logout\">Logout</a></li> <li><a href=\"/profile\">Profile</a></li> <li><a href=\"/ads/create\">Create Ad</a></li>";
-            }else {
-            	logInOrOut = "<li><a href=\"/login\">Login</a></li> <li><a href=\"/register\">Register</a></li>";
+            <% if (session.getAttribute("user") != null) {
+                logInOrOut = "<li><a href=\"/logout\">Logout</a></li> <li><a href=\"/profile\">Profile</a></li> <li><a href=\"/ads/create\">Create Ad</a></li>";
+            } else {
+                logInOrOut = "<li><a href=\"/login\">Login</a></li> <li><a href=\"/register\">Register</a></li>";
             }%>
             <%= logInOrOut%>
             <%--<li><a href="/login">Login</a></li>--%>
